@@ -11,8 +11,11 @@ func showNumber(number: Int, closure: @escaping () -> Void) {
     closur = closure
     print("Testing print under closure")
 }
-var number: () = showNumber(number: 5, closure: {
+func printMessage(){
     print("This closure is working")
+}
+var number: () = showNumber(number: 5, closure: {
+    printMessage()
 })
 closur()
 
